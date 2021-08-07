@@ -11,3 +11,8 @@ func NewEmergencyCountry() *EmergencyCountry {
 	heap.Init(&er.countryQueue)
 	return er
 }
+
+func (er *EmergencyCountry) registerCountry(country interface{}) {
+	potentialCountry := country.(*Country)
+	heap.Push(&er.countryQueue, potentialCountry)
+}
