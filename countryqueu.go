@@ -9,8 +9,9 @@ func (cq *CountryQueue) Pop() interface{} {
 	return nil
 }
 
-func (cq *CountryQueue) Push(patient interface{}) {
-
+func (cq *CountryQueue) Push(countryData interface{}) {
+	country := countryData.(*Country)
+	country.index = len(*cq) // -> because of heap interface
 }
 
 func (cq *CountryQueue) Len() int {
