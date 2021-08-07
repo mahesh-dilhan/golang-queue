@@ -1,5 +1,8 @@
 package queue
 
+//queue has two propeties ,
+// 1. enqueue
+// 2. dequeue
 type Queue struct {
 	items []*interface{}
 }
