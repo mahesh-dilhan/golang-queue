@@ -7,13 +7,17 @@ type EmergencyCountry struct {
 }
 
 func NewEmergencyCountry() *EmergencyCountry {
-	er := &EmergencyCountry{countryQueue: make(CountryQueue, 0)}
-	heap.Init(&er.countryQueue)
-	return er
+	ec := &EmergencyCountry{countryQueue: make(CountryQueue, 0)}
+	heap.Init(&ec.countryQueue)
+	return ec
 }
 
 //helper function
-func (er *EmergencyCountry) registerCountry(country interface{}) {
+func (ec *EmergencyCountry) registerCountry(country interface{}) {
 	potentialCountry := country.(*Country)
-	heap.Push(&er.countryQueue, potentialCountry)
+	heap.Push(&ec.countryQueue, potentialCountry)
+}
+
+func (ec *EmergencyCountry) handleCountry() *Country {
+	return heap.Pop(&ec.countryQueue).(*Country)
 }
