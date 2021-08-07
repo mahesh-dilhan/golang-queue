@@ -2,9 +2,13 @@ package queue
 
 type CountrySeverity int
 
-const name = 
+const (
+	Mild CountrySeverity = iota
+	Moderate
+	Critial
+)
 
 type Country struct {
-	name string
+	name     string
 	severity CountrySeverity
 }
