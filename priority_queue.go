@@ -12,6 +12,7 @@ func NewEmergencyCountry() *EmergencyCountry {
 	return er
 }
 
+//helper function
 func (er *EmergencyCountry) registerCountry(country interface{}) {
 	potentialCountry := country.(*Country)
 	heap.Push(&er.countryQueue, potentialCountry)
