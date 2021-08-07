@@ -2,7 +2,7 @@ package queue
 
 import "testing"
 
-func testenqueandDequeue(t *testing.T) {
+func TestEnqueandDequeue(t *testing.T) {
 	q := &Queue{}
 
 	q.enqueue("SG")

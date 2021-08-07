@@ -11,7 +11,7 @@ func (cq *CountryQueue) Pop() interface{} {
 	country := current[n-1]
 	country.index = -1
 	*cq = current[0 : n-1]
-	return nil
+	return country
 }
 
 func (cq *CountryQueue) Push(countryData interface{}) {

@@ -15,6 +15,7 @@ func NewEmergencyCountry() *EmergencyCountry {
 //helper function
 func (ec *EmergencyCountry) registerCountry(country interface{}) {
 	potentialCountry := country.(*Country)
+	//println(potentialCountry)
 	heap.Push(&ec.countryQueue, potentialCountry)
 }
 
@@ -22,7 +23,9 @@ func (ec *EmergencyCountry) handleCountry() *Country {
 	if ec.countryQueue.Len() == 0 {
 		return nil
 	}
-	return heap.Pop(&ec.countryQueue).(*Country)
+	//println(ec.countryQueue.Len())
+	nextCountry := heap.Pop(&ec.countryQueue)
+	return nextCountry.(*Country)
 }
 
 func (ec *EmergencyCountry) updateCountryStatus(country Country, severity CountrySeverity) {
