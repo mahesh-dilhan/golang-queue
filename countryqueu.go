@@ -8,5 +8,5 @@ func (cq *CountryQueue) Push(patient interface{}) {
 }
 
 func (cq *CountrySeverity) Pop() interface{} {
-
+	return nil
 }
