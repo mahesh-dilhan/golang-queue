@@ -3,10 +3,10 @@ package queue
 //priority queue impl
 type CountryQueue []*Country
 
-func (cq * CountryQueue) Push(patient interface{})  {
-	
+func (cq *CountryQueue) Push(patient interface{}) {
+
 }
 
-func ()  {
-	
+func (cq *CountrySeverity) Pop() interface{} {
+
 }
