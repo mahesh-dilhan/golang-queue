@@ -19,4 +19,6 @@ func (cq *CountryQueue) Len() int {
 
 func (cq CountryQueue) swap(a, b int) {
 	cq[a], cq[b] = cq[b], cq[a]
+	cq[a].index = a
+	cq[b].index = b
 }
