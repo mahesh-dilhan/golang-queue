@@ -12,6 +12,7 @@ func (cq *CountryQueue) Pop() interface{} {
 func (cq *CountryQueue) Push(countryData interface{}) {
 	country := countryData.(*Country)
 	country.index = len(*cq) // -> because of heap interface
+	*cq = append(*cq, country)
 }
 
 func (cq *CountryQueue) Len() int {
