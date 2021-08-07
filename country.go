@@ -11,4 +11,6 @@ const (
 type Country struct {
 	name     string
 	severity CountrySeverity
+
+	index int
 }

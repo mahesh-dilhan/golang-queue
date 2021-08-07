@@ -16,3 +16,7 @@ func (cq *CountrySeverity) Pop() interface{} {
 func (cq *CountryQueue) Len() int {
 	return len(*cq)
 }
+
+func (cq CountryQueue) swap(a, b int) {
+	cq[a], cq[b] = cq[b], cq[a]
+}
