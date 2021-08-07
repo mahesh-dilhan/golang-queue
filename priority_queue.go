@@ -7,6 +7,6 @@ type EmergencyCountry struct {
 }
 
 func NewEmergencyCountry() *EmergencyCountry {
-	err := &EmergencyCountry{countryQueue: make(CountryQueue, 0)}
-	heap.Init()
+	er := &EmergencyCountry{countryQueue: make(CountryQueue, 0)}
+	heap.Init(&er.countryQueue)
 }
