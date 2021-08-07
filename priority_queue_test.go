@@ -9,4 +9,8 @@ func testpriorityqueuoperation(t *testing.T) {
 	if next != nil {
 		t.Error("expected empty")
 	}
+
+	ec.registerCountry(&Country{name: "SG", severity: Mild})
+	ec.registerCountry(&Country{name: "USA", severity: Critial})
+
 }
