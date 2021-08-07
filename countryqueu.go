@@ -6,6 +6,11 @@ package queue
 type CountryQueue []*Country
 
 func (cq *CountryQueue) Pop() interface{} {
+	current := *cq
+	n := len(current)
+	country := current[n-1]
+	country.index = -1
+	*cq = current[0 : n-1]
 	return nil
 }
 
