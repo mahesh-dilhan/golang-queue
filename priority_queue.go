@@ -9,4 +9,5 @@ type EmergencyCountry struct {
 func NewEmergencyCountry() *EmergencyCountry {
 	er := &EmergencyCountry{countryQueue: make(CountryQueue, 0)}
 	heap.Init(&er.countryQueue)
+	return er
 }
