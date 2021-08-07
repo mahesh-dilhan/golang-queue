@@ -28,7 +28,7 @@ func (ec *EmergencyCountry) handleCountry() *Country {
 	return nextCountry.(*Country)
 }
 
-func (ec *EmergencyCountry) updateCountryStatus(country Country, severity CountrySeverity) {
+func (ec *EmergencyCountry) updateCountryStatus(country *Country, severity CountrySeverity) {
 	country.severity = severity
 	heap.Fix(&ec.countryQueue, country.index)
 
