@@ -19,5 +19,8 @@ func (ec *EmergencyCountry) registerCountry(country interface{}) {
 }
 
 func (ec *EmergencyCountry) handleCountry() *Country {
+	if ec.countryQueue.Len() == 0 {
+		return nil
+	}
 	return heap.Pop(&ec.countryQueue).(*Country)
 }
