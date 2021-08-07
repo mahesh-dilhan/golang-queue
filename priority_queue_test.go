@@ -13,4 +13,8 @@ func testpriorityqueuoperation(t *testing.T) {
 	ec.registerCountry(&Country{name: "SG", severity: Mild})
 	ec.registerCountry(&Country{name: "USA", severity: Critial})
 
+	next = ec.handleCountry()
+	if next.name != "USA" {
+		t.Error("expect USA")
+	}
 }
