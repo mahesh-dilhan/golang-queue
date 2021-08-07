@@ -18,5 +18,5 @@ func (q *Queue) dequeue() interface{} {
 	first := q.items[0]
 	q.items = q.items[1:]
 
-	return first
+	return *first
 }
