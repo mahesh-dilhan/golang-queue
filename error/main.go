@@ -1,13 +1,16 @@
 package main
 
+import "fmt"
+
 type MyError struct {
 }
 
-func (er *MyError) Error() []rune {
-	merror := []rune{100, 100, 100}
-	return merror
+func (er *MyError) Error() string {
+
+	return "something bad happen"
 }
 
 func main() {
-	e := MyError{}
+	e := &MyError{}
+	fmt.Println(e)
 }
